@@ -20,10 +20,10 @@ Binde die Datei javascript.js im head-Bereich ein
 ### JavaScript logik
 Schreibe eine Funktion Begruessen die
 - Den Eingegebenen Namen ausließt
-- Prüft ob ein Name eingegeben wurde
 - Eine Begrüßung mithilfe vom p element anzeigt
 
 ### Tips
 - Benutze W3Schools
 - Mache alles Nacheinander und nicht alles aufeinmal
 - Bei Unklarheiten/Fragen kannst du gerne Fragen
+- Zudem findest du hier auch Hilfestellungen https://github.com/Timo348/EinstiegProgrammierung/blob/main/JavaScript/HilfeAufgabe1.md
