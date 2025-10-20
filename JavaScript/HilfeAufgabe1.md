@@ -2,12 +2,14 @@
 Hier findest du Hilfestellungen für die Aufgabe 1 Falls du sie benötigst
 
 ### Eingabefeld | Was benötigst du
-- https://www.w3schools.com/js/tryit.asp?filename=tryjs_form_submit
 - Du Benötigst für das eingeben des Namens ein input Element (mit einem bestimmten type)
-- Ein button mit dem type submit
+- Ein button
 - Eine funktion die aufgerufen wird nachdem der button gedrückt wurde
-
 
 ### Ausgabefeld | Was benötigst du
 - Einen Paragraphen (oder etwas änliches) wo du deinen Text reinschreibst
-- Eine Ausgabe wenn das Feld leer ist (mit einer if verzweigung)
+
+### Links
+https://www.w3schools.com/html/html_form_input_types.asp
+https://www.w3schools.com/jsref/event_onclick.asp
+https://www.w3schools.com/jsref/prop_node_textcontent.asp
