@@ -1,0 +1,4 @@
+- Erklären Können was eine Variabel ist (Auch verschiedene Datentypen z.B. String, Int, Float)
+- Was ist eine Funktion/Methode
+- Was ist if else (verzweigungen)
+- Was sind Schleifen (while, for)
