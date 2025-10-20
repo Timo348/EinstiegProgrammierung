@@ -10,6 +10,6 @@ Hier findest du Hilfestellungen für die Aufgabe 1 Falls du sie benötigst
 - Einen Paragraphen (oder etwas änliches) wo du deinen Text reinschreibst
 
 ### Links
-https://www.w3schools.com/html/html_form_input_types.asp
-https://www.w3schools.com/jsref/event_onclick.asp
-https://www.w3schools.com/jsref/prop_node_textcontent.asp
+- https://www.w3schools.com/html/html_form_input_types.asp
+- https://www.w3schools.com/jsref/event_onclick.asp
+- https://www.w3schools.com/jsref/prop_node_textcontent.asp
