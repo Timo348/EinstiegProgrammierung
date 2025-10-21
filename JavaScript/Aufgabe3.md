@@ -1,4 +1,4 @@
-# Aufgabe 2 Schleifen
+# Aufgabe 3 Schleifen
 ## Voraussetzungen
 - Editor deiner Wahl (z.B. Visual Studio Code)
 - Grundkenntisse in HTML
