@@ -46,7 +46,7 @@
         // Eingabewerte holen von den Input-Feldern
         let zahl1 = parseFloat(document.getElementById('zahl1').value); // parseFloat um sicherzustellen, dass es als Zahl behandelt wird
         let zahl2 = parseFloat(document.getElementById('zahl2').value);
-        let operator = document.querySelector('input[name="operator"]:checked').value;
+        let operator = document.querySelector('input[name="operator"]:checked').value; // Holt den Wert des ausgewählten Radio-Buttons (der der Checked ist)
 
         let ergebnis;
 
@@ -71,12 +71,12 @@
                 ergebnis = "Ungültiger Operator";
         }
 
-        const ergebnisDiv = document.getElementById('ergebnis');
+        const ergebnisDiv = document.getElementById('ergebnis'); // Holt das Div in dem das Ergebnis angezeigt werden soll
         const h3 = document.createElement('h3');
         h3.textContent = 'Ergebnis: ' + ergebnis;
         ergebnisDiv.innerHTML = ''; // Vorheriges Ergebnis löschen (Sonst werden mehrere Ergebnisse angezeigt, 
         // kann aber Ausgelassen werden um z.B Verlauf zu zeigen)
-        ergebnisDiv.appendChild(h3);
+        ergebnisDiv.appendChild(h3); // Hängt das h3 ans Ende von ergebnisDiv
     });
   </script>
 </body>
