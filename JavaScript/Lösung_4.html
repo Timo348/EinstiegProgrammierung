@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Taschenrechner</title>
+</head>
+<body>
+  <h1>Taschenrechner</h1>
+
+  <label for="zahl1">Zahl 1:</label>
+  <input type="number" id="zahl1" name="zahl1" required />
+  <br /><br />
+
+  <label for="zahl2">Zahl 2:</label>
+  <input type="number" id="zahl2" name="zahl2" required />
+  <br /><br />
+
+  <p>Rechenoperator wählen:</p>
+  <label><input type="radio" name="operator" value="+" checked /> +</label>
+  <label><input type="radio" name="operator" value="-" /> -</label>
+  <label><input type="radio" name="operator" value="*" /> *</label>
+  <label><input type="radio" name="operator" value="/" /> /</label>
+  <br /><br />
+
+  <button id="berechneBtn">Berechnen</button>
+
+  <div id="ergebnis"></div>
+
+  <script>
+    document.getElementById('berechneBtn').addEventListener('click', function() {
+      // Variablen erstellen und Werte aus den Inputs holen
+      let zahl1 = parseFloat(document.getElementById('zahl1').value);
+      let zahl2 = parseFloat(document.getElementById('zahl2').value);
+      let operator = document.querySelector('input[name="operator"]:checked').value;
+      let ergebnis;
+
+      // Switch-Case zur Operator-Auswahl und Berechnung
+      switch(operator) {
+        case '+':
+          ergebnis = zahl1 + zahl2;
+          break;
+        case '-':
+          ergebnis = zahl1 - zahl2;
+          break;
+        case '*':
+          ergebnis = zahl1 * zahl2;
+          break;
+        case '/':
+          if (zahl2 === 0) {
+            ergebnis = "Division durch 0 ist nicht erlaubt.";
+          } else {
+            ergebnis = zahl1 / zahl2;
+          }
+          break;
+        default:
+          ergebnis = "Ungültiger Operator";
+      }
+
+      // Ergebnis im h3-Element anzeigen
+      let ergebnisDiv = document.getElementById('ergebnis');
+      ergebnisDiv.innerHTML = `<h3>Ergebnis: ${ergebnis}</h3>`;
+    });
+  </script>
+</body>
+</html>
