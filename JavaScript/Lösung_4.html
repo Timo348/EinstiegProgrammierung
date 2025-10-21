@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <style>
+    body {
+      font-family: Helvetica;
+      margin: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+
+    </style>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Taschenrechner</title>
@@ -28,38 +40,43 @@
   <div id="ergebnis"></div>
 
   <script>
-    document.getElementById('berechneBtn').addEventListener('click', function() {
-      // Variablen erstellen und Werte aus den Inputs holen
-      let zahl1 = parseFloat(document.getElementById('zahl1').value);
-      let zahl2 = parseFloat(document.getElementById('zahl2').value);
-      let operator = document.querySelector('input[name="operator"]:checked').value;
-      let ergebnis;
+    // Event Listener für den Berechnen-Button (Wenn geklickt wird, soll die Funktion ausgeführt werden)
+    document.getElementById('berechneBtn').addEventListener('click', function() { 
 
-      // Switch-Case zur Operator-Auswahl und Berechnung
-      switch(operator) {
-        case '+':
-          ergebnis = zahl1 + zahl2;
-          break;
-        case '-':
-          ergebnis = zahl1 - zahl2;
-          break;
-        case '*':
-          ergebnis = zahl1 * zahl2;
-          break;
-        case '/':
-          if (zahl2 === 0) {
-            ergebnis = "Division durch 0 ist nicht erlaubt.";
-          } else {
-            ergebnis = zahl1 / zahl2;
-          }
-          break;
-        default:
-          ergebnis = "Ungültiger Operator";
-      }
+        // Eingabewerte holen von den Input-Feldern
+        let zahl1 = parseFloat(document.getElementById('zahl1').value); // parseFloat um sicherzustellen, dass es als Zahl behandelt wird
+        let zahl2 = parseFloat(document.getElementById('zahl2').value);
+        let operator = document.querySelector('input[name="operator"]:checked').value;
 
-      // Ergebnis im h3-Element anzeigen
-      let ergebnisDiv = document.getElementById('ergebnis');
-      ergebnisDiv.innerHTML = `<h3>Ergebnis: ${ergebnis}</h3>`;
+        let ergebnis;
+
+        switch (operator) { // Rechenoperationen basierend auf dem ausgewählten Operator der vom Radio-Input kommt
+            case '+':
+                ergebnis = zahl1 + zahl2;
+                break;
+            case '-':
+                ergebnis = zahl1 - zahl2;
+                break;
+            case '*':
+                ergebnis = zahl1 * zahl2;
+                break;
+            case '/':
+                if (zahl2 === 0) {
+                    ergebnis = "Division durch 0 ist nicht erlaubt.";
+                } else {
+                    ergebnis = zahl1 / zahl2;
+                }
+                break;
+            default: // Fallback für ungültigen Operator (Wenn keiner ausgewählt wurde)
+                ergebnis = "Ungültiger Operator";
+        }
+
+        const ergebnisDiv = document.getElementById('ergebnis');
+        const h3 = document.createElement('h3');
+        h3.textContent = 'Ergebnis: ' + ergebnis;
+        ergebnisDiv.innerHTML = ''; // Vorheriges Ergebnis löschen (Sonst werden mehrere Ergebnisse angezeigt, 
+        // kann aber Ausgelassen werden um z.B Verlauf zu zeigen)
+        ergebnisDiv.appendChild(h3);
     });
   </script>
 </body>
